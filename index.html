@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maygasse Finance Society</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="topbar container">
+        <a href="#top" class="brand" aria-label="Maygasse Finance Society home">
+          <img src="assets/maygasse-crest.svg" alt="" class="brand-logo" />
+          <span>Maygasse Finance Society</span>
+        </a>
+        <div class="actions">
+          <a href="#about" data-i18n="nav.about">Über uns</a>
+          <a href="#cta" data-i18n="nav.join">Bewerben</a>
+          <button id="langToggle" class="lang-toggle" aria-label="Language switcher">EN</button>
+        </div>
+      </nav>
+      <div class="hero-content container fade-up">
+        <img src="assets/maygasse-crest.svg" alt="Maygasse Finance Society crest" class="hero-logo" />
+        <h1 data-i18n="hero.title">Maygasse Finance Society</h1>
+        <p data-i18n="hero.subtitle">
+          Excellence in Financial Education. Leadership. Responsibility.
+        </p>
+        <div class="hero-buttons">
+          <a href="#accordion" class="btn btn-primary" data-i18n="hero.btnAbout">Über uns entdecken</a>
+          <button class="btn btn-secondary open-application" type="button" data-i18n="hero.btnJoin">Mitglied werden</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container" id="accordion">
+        <h2 class="section-title" data-i18n="sections.headline">Akademisches Profil</h2>
+
+        <div class="accordion">
+          <article class="accordion-item open">
+            <button class="accordion-trigger" aria-expanded="true" data-i18n="vision.title">Vision &amp; Zielsetzung</button>
+            <div class="accordion-panel">
+              <p data-i18n="vision.text">
+                Förderung finanzieller Bildung durch praxisnahe Auseinandersetzung mit Wirtschaft, Kapitalmärkten und verantwortungsbewusstem Vermögensaufbau.
+              </p>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" data-i18n="learning.title">Lernziele</button>
+            <div class="accordion-panel">
+              <ul>
+                <li data-i18n="learning.1">Aktien, ETFs, Anleihen verstehen</li>
+                <li data-i18n="learning.2">Marktanalysen interpretieren</li>
+                <li data-i18n="learning.3">Portfolioverwaltung</li>
+                <li data-i18n="learning.4">Unternehmensbewertung</li>
+                <li data-i18n="learning.5">Präsentations- &amp; Teamfähigkeiten</li>
+                <li data-i18n="learning.6">Langfristiges Denken und Risikobewusstsein</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" data-i18n="activities.title">Aktivitäten</button>
+            <div class="accordion-panel">
+              <ul>
+                <li data-i18n="activities.1">Aktie/ETF der Woche</li>
+                <li data-i18n="activities.2">Markt-Updates</li>
+                <li data-i18n="activities.3">Portfolio-Challenges</li>
+                <li data-i18n="activities.4">Workshops (Excel, ETFs, Budgetplanung)</li>
+                <li data-i18n="activities.5">Gastvorträge</li>
+                <li data-i18n="activities.6">Business- &amp; Startup-Pitches</li>
+                <li data-i18n="activities.7">Fallstudien und Wettbewerbe</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" data-i18n="org.title">Organisation</button>
+            <div class="accordion-panel">
+              <ul>
+                <li data-i18n="org.1">Präsidium</li>
+                <li data-i18n="org.2">Research Team</li>
+                <li data-i18n="org.3">Education Team</li>
+                <li data-i18n="org.4">Event Team</li>
+                <li data-i18n="org.5">Kommunikation/Marketing</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false" data-i18n="plan.title">Jahresplan</button>
+            <div class="accordion-panel">
+              <ul>
+                <li data-i18n="plan.1">Weekly: Marktupdate &amp; Workshops</li>
+                <li data-i18n="plan.2">Monthly: Gastvorträge oder Wettbewerbe</li>
+                <li data-i18n="plan.3">Halbjährlich: Exkursion</li>
+                <li data-i18n="plan.4">Jährlich: Große Investment-Challenge</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section prestige" id="about">
+        <div class="container fade-up">
+          <p class="quote" data-i18n="prestige.text">
+            “A student-led academic society dedicated to excellence, discipline and long-term thinking.”
+          </p>
+        </div>
+      </section>
+
+      <section class="section cta" id="cta">
+        <div class="container fade-up">
+          <h2 data-i18n="cta.title">Become part of the next generation of responsible leaders.</h2>
+          <button class="btn btn-primary open-application" type="button" data-i18n="cta.button">Jetzt bewerben</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="applicationModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <button class="modal-close" id="closeModal" type="button" aria-label="Close">×</button>
+        <img src="assets/maygasse-crest.svg" alt="Maygasse Finance Society crest" class="modal-logo" />
+        <h2 id="modalTitle" data-i18n="modal.title">Bewerbung & Mitgliedschaft</h2>
+        <p data-i18n="modal.text">
+          Wir freuen uns über engagierte Schülerinnen und Schüler, die mit Disziplin, Integrität und langfristigem Denken Verantwortung übernehmen möchten.
+        </p>
+
+        <form id="applicationForm" class="application-form" enctype="multipart/form-data">
+          <label>
+            <span data-i18n="form.name">Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span data-i18n="form.class">Klasse</span>
+            <input type="text" name="klasse" required />
+          </label>
+          <label>
+            <span data-i18n="form.cv">Resume/CV</span>
+            <input type="file" name="cv" accept=".pdf,.doc,.docx,.txt" required />
+          </label>
+          <label>
+            <span data-i18n="form.motivation">Motivation</span>
+            <textarea name="motivation" rows="3" required></textarea>
+          </label>
+          <label>
+            <span data-i18n="form.message">Nachricht</span>
+            <textarea name="nachricht" rows="3" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit" data-i18n="form.submit">Jetzt bewerben</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container footer-inner">
+        <img src="assets/maygasse-crest.svg" alt="Maygasse Finance Society crest" class="footer-logo" />
+        <div>
+          <h3>Maygasse Finance Society</h3>
+          <p>Est. 1983</p>
+          <p>Maygasse School</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

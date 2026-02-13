@@ -1,0 +1,385 @@
+:root {
+  --green: #0b3d2e;
+  --green-soft: #1b5845;
+  --ivory: #f8f6f0;
+  --beige: #d8c7a3;
+  --text: #1e2a24;
+  --shadow: 0 20px 45px rgba(5, 31, 23, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: linear-gradient(rgba(248, 246, 240, 0.95), rgba(248, 246, 240, 0.95)),
+    url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1920&q=80") center/cover fixed;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(5, 31, 23, 0.83), rgba(5, 31, 23, 0.7)),
+    url("https://images.unsplash.com/photo-1511735111819-9a3f7709049c?auto=format&fit=crop&w=2000&q=80") center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+}
+
+.brand {
+  color: var(--ivory);
+  text-decoration: none;
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: relative;
+  z-index: 10;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.actions a,
+.lang-toggle {
+  color: var(--ivory);
+  text-decoration: none;
+  border: 1px solid rgba(216, 199, 163, 0.5);
+  padding: 0.45rem 0.85rem;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.actions a:hover,
+.lang-toggle:hover {
+  background: rgba(216, 199, 163, 0.18);
+}
+
+.hero-content {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1.2rem;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-logo {
+  width: min(280px, 65vw);
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36));
+}
+
+h1,
+.section-title,
+.quote,
+.cta h2 {
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.hero p {
+  margin: 0;
+  max-width: 680px;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  color: #ece8de;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.65rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--beige);
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn-primary {
+  color: var(--green);
+  background: var(--beige);
+}
+
+.btn-secondary {
+  color: var(--ivory);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.section {
+  padding: clamp(4rem, 9vw, 7rem) 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--green);
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+}
+
+.accordion {
+  display: grid;
+  gap: 1rem;
+}
+
+.accordion-item {
+  background: linear-gradient(180deg, #fff, #f6f2e8);
+  border: 1px solid rgba(11, 61, 46, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.accordion-trigger {
+  width: 100%;
+  border: 0;
+  text-align: left;
+  background: transparent;
+  padding: 1.25rem 1.6rem;
+  font-size: clamp(1.15rem, 2.7vw, 1.6rem);
+  font-family: "Cinzel", serif;
+  color: var(--green);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.accordion-trigger:hover {
+  background: rgba(216, 199, 163, 0.18);
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.6rem;
+}
+
+.accordion-item.open .accordion-panel {
+  max-height: 520px;
+  padding: 0 1.6rem 1.5rem;
+}
+
+.accordion-panel ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.prestige {
+  position: relative;
+  background: linear-gradient(135deg, rgba(11, 61, 46, 0.95), rgba(11, 61, 46, 0.84));
+  color: var(--ivory);
+  overflow: hidden;
+}
+
+.prestige::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/maygasse-crest.svg") center/320px no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.quote {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 830px;
+  font-size: clamp(1.2rem, 3.2vw, 2rem);
+}
+
+.cta {
+  text-align: center;
+  background: linear-gradient(180deg, #f6f1e6, #fdfcf9);
+}
+
+.cta h2 {
+  margin-top: 0;
+  color: var(--green);
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  margin-bottom: 1.4rem;
+}
+
+footer {
+  background: var(--green);
+  color: var(--ivory);
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+
+.footer-logo {
+  width: 72px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 31, 23, 0.62);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 30;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: min(560px, 95vw);
+  background: linear-gradient(180deg, #fff, #f6f2e8);
+  border: 1px solid rgba(11, 61, 46, 0.2);
+  border-radius: 20px;
+  padding: 2rem 1.6rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  position: relative;
+}
+
+.modal-logo {
+  width: 140px;
+  margin: 0 auto 0.85rem;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
+}
+
+
+.application-form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.application-form label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  color: var(--green);
+}
+
+.application-form input,
+.application-form textarea {
+  width: 100%;
+  border: 1px solid rgba(11, 61, 46, 0.3);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  background: #fff;
+}
+
+.form-status {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--green);
+  min-height: 1.2rem;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: var(--green);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .accordion-item.open .accordion-panel {
+    max-height: 700px;
+  }
+}

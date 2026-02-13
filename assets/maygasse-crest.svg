@@ -1,0 +1,25 @@
+<svg width="512" height="580" viewBox="0 0 512 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="580" fill="transparent"/>
+  <g filter="url(#shadow)">
+    <path d="M256 52C196 52 130 66 90 80V250C90 344 155 416 256 506C357 416 422 344 422 250V80C382 66 316 52 256 52Z" fill="#0B3D2E" stroke="#D8C7A3" stroke-width="8"/>
+    <path d="M256 96C210 96 158 106 126 118V246C126 322 182 382 256 452C330 382 386 322 386 246V118C354 106 302 96 256 96Z" fill="#F8F6F0" stroke="#0B3D2E" stroke-width="4"/>
+    <path d="M256 96V452" stroke="#0B3D2E" stroke-width="4"/>
+    <rect x="164" y="148" width="72" height="68" fill="#0B3D2E"/>
+    <rect x="276" y="148" width="72" height="68" fill="#F8F6F0"/>
+    <rect x="164" y="252" width="72" height="92" fill="#F8F6F0"/>
+    <rect x="276" y="252" width="72" height="92" fill="#0B3D2E"/>
+    <circle cx="256" cy="285" r="68" fill="#0B3D2E" stroke="#D8C7A3" stroke-width="4"/>
+    <text x="256" y="302" text-anchor="middle" font-size="72" font-family="Georgia, serif" fill="#F8F6F0" font-weight="700">M</text>
+    <text x="327" y="320" text-anchor="middle" font-size="34" font-family="Georgia, serif" fill="#F8F6F0">1983</text>
+    <path d="M86 414C166 396 346 396 426 414L408 454C338 440 174 440 104 454L86 414Z" fill="#0B3D2E" stroke="#D8C7A3" stroke-width="4"/>
+    <text x="256" y="438" text-anchor="middle" font-size="54" font-family="Georgia, serif" fill="#F8F6F0" font-weight="600" letter-spacing="2">MAYGASSE</text>
+    <path d="M132 460H380L368 500H144L132 460Z" fill="#F8F6F0" stroke="#0B3D2E" stroke-width="3"/>
+    <text x="256" y="491" text-anchor="middle" font-size="31" font-family="Georgia, serif" fill="#0B3D2E" letter-spacing="1">FINANCE SOCIETY</text>
+    <path d="M194 36L256 12L318 36V56H194V36Z" fill="#0B3D2E" stroke="#D8C7A3" stroke-width="4"/>
+  </g>
+  <defs>
+    <filter id="shadow" x="40" y="0" width="432" height="560" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+</svg>
