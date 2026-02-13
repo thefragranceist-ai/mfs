@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: maygasse-finance-society
+    runtime: node
+    plan: free
+    autoDeploy: true
+    buildCommand: "npm install --omit=dev"
+    startCommand: "npm start"
+    healthCheckPath: "/"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false
+      - key: SMTP_SECURE
+        value: "true"
